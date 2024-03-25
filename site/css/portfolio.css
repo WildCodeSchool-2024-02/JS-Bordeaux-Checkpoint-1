@@ -142,4 +142,11 @@ article>section {
       order: 1;
       align-self: center;
     }
+
+    .projects {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 }
