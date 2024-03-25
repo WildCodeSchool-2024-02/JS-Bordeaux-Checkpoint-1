@@ -121,3 +121,9 @@ p {
     align-items: center;
   }
 }
+
+@media screen and (width < 700px){
+  .desktop{
+    display: none;
+  }
+}
