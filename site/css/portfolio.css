@@ -113,6 +113,14 @@ p {
   opacity: 50%;
 }
 
+.modifyTextColor{
+border-radius: 0.3rem;
+color: white;
+background-color:#fc9dad ;
+border-color: #fbe2e6;
+font-size: 1rem;
+}
+
 @media screen and (width>700px) {
   .firstBanner {
     display: flex;
