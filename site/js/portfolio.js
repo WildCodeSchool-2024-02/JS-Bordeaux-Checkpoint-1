@@ -23,8 +23,9 @@ modifyButton.addEventListener("click", function(){
 
     if(newBgColor !== null){
 
-        let descriptionSection = document.querySelector('.description.pink-bg');
+        let descriptionSection = document.querySelectorAll('[class*="pink"]');
         descriptionSection.style.backgroundColor = newBgColor;
+        descriptionSection.style.color = newBgColor;
     }
 
 
