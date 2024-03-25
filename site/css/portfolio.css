@@ -52,6 +52,12 @@ p {
   background-color: var(--lightWildColor);
 }
 
+.description>button {
+  height: 40px;
+  border-radius: var(--radius);
+  margin: 1rem;
+}
+
 .skills {
   display: grid;
   grid-template-columns: 1fr;
