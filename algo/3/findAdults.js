@@ -33,7 +33,7 @@ function findAdults(persons) {
     } else if (persons[i].age >= 18 && persons[i].sex === 'male') {
       const adultManArray = [];
       console.log(adultManArray.push(persons[i]));
-      const adultWomanAndManArray = [adultWomanArray; adultManArray];
+      const adultWomanAndManArray = [adultWomanArray, adultManArray];
       return adultWomanAndManArray;
     };
   };

@@ -32,6 +32,7 @@ p {
   margin: 0;
   margin-top: calc(var(--gutter) * 5);
   margin-bottom: calc(var(--gutter) * -0.3125);
+  display: none;
 }
 
 .description {
@@ -55,6 +56,8 @@ p {
   margin-top: calc(var(--gutter) * -2);
   border-radius: var(--radius);
   padding: 0 10%;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .skills--title {
@@ -107,4 +110,27 @@ p {
 
 .purple-text {
   color: var(--purple);
+}
+
+@media screen and (width > 700px) {
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .first-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .desktop {
+    display: contents;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
