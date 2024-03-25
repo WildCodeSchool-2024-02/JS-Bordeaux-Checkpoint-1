@@ -32,7 +32,8 @@ img {
   max-width: 100%;
 }
 
-figure {display: none;
+figure {
+  display: none;
 }
 
 h1 {
@@ -137,18 +138,27 @@ p {
   }
 
 
-.firstBanner {
+  .firstBanner {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+  }
 
-.firstBanner>img:first-of-type {
+  .firstBanner>img:first-of-type {
   width: 10rem;
-}
+  }
 
-figure {
+  figure {
   display:inline-block;
-}
+  }
 
+  .without-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .column {
+    width: 40%;
+  }
 }
