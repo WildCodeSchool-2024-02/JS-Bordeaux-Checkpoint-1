@@ -108,3 +108,46 @@ p {
 .purple-text {
   color: var(--purple);
 }
+
+.disabled{
+  opacity: 50%;
+}
+
+@media screen and (width>700px) {
+  .firstBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .firstBanner img {
+    width: 13rem;
+  }
+
+  .firstBanner h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .skills {
+    margin-top: calc(var(--gutter) * -2);
+    border-radius: var(--radius);
+    padding: 0 10%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+}
+
+  @media screen and (width<700px) {
+    .desktop {
+      display: none;
+    }
+    .skills {
+      margin-top: calc(var(--gutter) * -2);
+      border-radius: var(--radius);
+      padding: 0 10%;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }

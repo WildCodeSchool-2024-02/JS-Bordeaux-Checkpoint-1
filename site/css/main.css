@@ -10,7 +10,7 @@
   --radius: 5px;
   --borderTemplate: 1px solid;
 
-  --darkColor : #000000;
+  --darkColor: #000000;
   --textColor: #39424e;
   --wildColor: #f76c6c;
   --lightWildColor: #ffc0cb;
@@ -58,4 +58,12 @@ button:focus {
 
 #firstname {
   color: red;
-}  
+}
+
+@media screen and (width>700px) {
+header nav {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--gutter) calc(var(--gutter) * 2);
+}
+}
