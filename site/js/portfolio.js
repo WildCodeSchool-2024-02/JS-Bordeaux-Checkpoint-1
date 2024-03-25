@@ -16,7 +16,7 @@ function modifyText() {
 
     let bgButton = document.querySelector(".modifyTextColor");
 
-    let colorText = document.querySelectorAll("pink-text");
+    let colorText = document.querySelectorAll(".pink-text");
 
     let newbgColor = prompt("entrez une nouvelle couleur de fond :");
 
