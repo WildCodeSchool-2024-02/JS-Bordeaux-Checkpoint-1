@@ -133,15 +133,13 @@ article>section {
     }
 
     .skills {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
     }
 
     .skills--title {
-      grid-column: 1/3;
-    }
-    .columnFrontend {
       order: 1;
+      align-self: center;
     }
 }
