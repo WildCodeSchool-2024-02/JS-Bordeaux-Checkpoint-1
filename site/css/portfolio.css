@@ -120,6 +120,9 @@ header nav{
   color: var(--purple);
 }
 
+.disabled{
+  opacity: 0.5;
+}
 
 @media only screen and (max-width: 700px) {
   .desktop{
@@ -141,5 +144,16 @@ header nav{
   }
   .column{
     flex-grow: 1;
+  }
+  .projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .work{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
