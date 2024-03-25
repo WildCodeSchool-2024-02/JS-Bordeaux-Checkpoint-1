@@ -77,6 +77,24 @@ nav{
   background-color: var(--lightWildColor);
 }
 
+button {
+  width: 120px;
+  height: 80px; 
+  background-color: #FFC0CC; 
+  color: white; 
+  border: 2px solid white;
+  border-radius: 5px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .skills {
   margin-top: calc(var(--gutter) * -2);
   border-radius: var(--radius);
@@ -84,7 +102,6 @@ nav{
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-
 }
 
 .skills--title {
