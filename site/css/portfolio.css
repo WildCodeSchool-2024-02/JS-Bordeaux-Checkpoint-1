@@ -109,6 +109,9 @@ p {
   color: var(--purple);
 }
 
+.disabled{
+  opacity: 0.5;
+}
 @media screen and (width > 700px) {
   header nav{
     display: flex;
