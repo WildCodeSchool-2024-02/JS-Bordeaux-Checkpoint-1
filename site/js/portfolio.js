@@ -26,3 +26,14 @@ namePortfolio.addEventListener('click', function () {
         footer.classList.add('purple-bg');
     };
 });
+
+const portfolioLinks = document.querySelectorAll('a');
+
+console.log(portfolioLinks);
+
+portfolioLinks.addEventListener('click', function () {
+    portfolioLinks.forEach(link => {
+        link.classList.remove('pink-text');
+        link.classList.add('purple-text');
+    });
+});
