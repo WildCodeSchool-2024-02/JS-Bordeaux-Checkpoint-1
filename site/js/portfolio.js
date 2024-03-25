@@ -45,9 +45,42 @@ btnModification.addEventListener('click', () => {
     allA.forEach((e) => {
         e.style.color = newColor;
     })
+    frontDevToolsButton.style.backgroundColor = newColor;
+
 
     userName.innerText = prompt('Enter your name');
     userName.style.color = "white"
-})
+});
 
-// Step 5 :
+// Step 6
+const frontDevTools = document.getElementById('front-dev-tools');
+const allLi = document.querySelectorAll('#front-dev-tools > li');
+
+const frontDevToolsArticle = document.createElement('article');
+frontDevToolsArticle.style.padding = "1rem";
+frontDevToolsArticle.style.display = "flex";
+frontDevToolsArticle.style.justifyContent = "center";
+frontDevToolsArticle.style.alignContent = "center";
+frontDevTools.appendChild(frontDevToolsArticle);
+
+const frontDevToolsButton = document.createElement('button');
+frontDevToolsButton.style.padding = "1rem";
+frontDevToolsButton.style.backgroundColor = "#750ff7";
+frontDevToolsButton.style.color = "white";
+
+frontDevToolsButton.innerText = "Modify";
+
+frontDevToolsArticle.appendChild(frontDevToolsButton);
+
+
+frontDevToolsButton.addEventListener('click', () => {
+    allLi.forEach((e, index) => {
+        if (index === 0) {
+            e.innerText = "VSCode" 
+        } else if (index === 1) {
+            e.innerText = "GitHub"
+        } else if (index === 2) {
+            e.innerText = "Terminal"
+        }
+    })
+})
