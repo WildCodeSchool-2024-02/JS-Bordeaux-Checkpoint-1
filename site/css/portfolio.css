@@ -52,6 +52,10 @@ p {
   background-color: var(--lightWildColor);
 }
 
+.purple-bg {
+  background-color: #750ff7;
+}
+
 .skills {
   margin-top: calc(var(--gutter) * -2);
   border-radius: var(--radius);
