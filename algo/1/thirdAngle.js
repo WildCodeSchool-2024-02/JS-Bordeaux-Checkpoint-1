@@ -7,7 +7,14 @@ thirdAngle(20, 80) doit retourner 80
 */
 
 function thirdAngle(a, b) {
-  // Your code here !
+  let someTotal = 180;
+  let amountThirdAngle = someTotal - (a + b)
+
+  if (a > 180 && b > 180 || a < 0 && b < 0) {
+    console.log('impossible, veuillez choisir de bonnes mesures');
+  } else {
+    return amountThirdAngle
+  }
 }
 
 module.exports = thirdAngle;
