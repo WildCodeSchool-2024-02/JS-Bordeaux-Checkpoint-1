@@ -6,8 +6,19 @@ thirdAngle(90, 30) doit retourner 60
 thirdAngle(20, 80) doit retourner 80
 */
 
+const allAngles = 180;
+
 function thirdAngle(a, b) {
-  // Your code here !
+if (a === 90 || b === 90){
+  let angle90 = a-b;
+return angle90;
 }
+else{
+  let otherAngles = a+b;
+ return allAngles-otherAngles;
+ 
+}
+}
+
 
 module.exports = thirdAngle;
