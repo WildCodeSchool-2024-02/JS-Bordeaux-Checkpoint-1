@@ -28,6 +28,11 @@ p {
   margin-bottom: var(--gutter);
 }
 
+main > article:nth-child(1) > section > p:nth-child(1) {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
 .desktop {
   margin: 0;
   margin-top: calc(var(--gutter) * 5);
@@ -55,11 +60,18 @@ p {
   margin-top: calc(var(--gutter) * -2);
   border-radius: var(--radius);
   padding: 0 10%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
 }
 
 .skills--title {
   margin: calc(var(--gutter) * -2) 0;
   text-align: var(--textAlign);
+  
+  display: grid;
+  grid-column: 1/3;
 }
 
 .column {
@@ -74,13 +86,13 @@ p {
 }
 
 .column:first-of-type {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
 }
 
 .column:last-child {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }
 
 .column ul {
@@ -105,6 +117,78 @@ p {
   box-shadow: var(--styledShadow);
 }
 
+.disabled {
+  opacity: 0.3;
+}
+
 .purple-text {
   color: var(--purple);
+}
+
+/*  ----- Media query ----- */
+
+@media screen and (max-width: 700px) {
+  .desktop img {
+    display: none;
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  .column:first-of-type {
+    grid-template-columns: 1fr;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .column:last-child {
+    grid-row: 1;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main > article:nth-child(1) > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main > article:nth-child(1) > section > p:nth-child(1) {
+    font-size: 1.4rem;
+    font-weight: 900;
+  }
+
+  .column:first-of-type {
+    order: 1;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .projects > h2 {
+    grid-column: 1/3;
+    grid-column-start: 2;
+  }
+
+  .projects > p {
+    grid-column: 1/4;
+    grid-column-start: 2;
+  } 
+
+  .projects > .box:last-child {
+    grid-column-start: 2;
+  }
 }
