@@ -59,6 +59,12 @@ main > section:first-of-type {
   background-color: var(--lightWildColor);
 }
 
+main > article > section > a {
+  border: 0.1rem solid white;
+  border-radius: var(--radius);
+  color: white;
+}
+
 .skills {
   margin-top: calc(var(--gutter) * -2);
   border-radius: var(--radius);
