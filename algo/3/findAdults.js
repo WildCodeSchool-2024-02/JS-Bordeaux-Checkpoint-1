@@ -5,6 +5,7 @@ lui-même contenant deux sous-tableaux :
 - Le second ne contient que des hommes adultes
 (Étant donné qu'une personne est un adulte si elle a 18 ans ou plus)
 
+
 const persons = [
   { name: 'Mary Poppins', age: 32, sex: 'female' },
   { name: 'Tony Stark', age: 36, sex: 'male' },
@@ -22,11 +23,23 @@ const persons = [
   { name: 'Millie Bobby Brown', age: 15, sex: 'female' },
   { name: 'Penelope Cruz', age: 47, sex: 'female' },
 ];
-
 */
 
 function findAdults(persons) {
-  // Your code here !
+ let adultWomen = [];
+ let adultMen = [];
+
+ for (person of persons){
+  if(person.age >= 18){
+    if(person.sex === 'female'){
+      adultWomen.push(person);
+    }else if(person.sex === 'male'){
+      adultMen.push(person);
+    }
+  }
+ }
+
+ return [adultMen, adultWomen];
 }
 
 module.exports = findAdults;
