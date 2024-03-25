@@ -8,7 +8,7 @@ const eventImg = myImg.addEventListener('click', () => {
     myImg.src = nextImg
 })
 
-// Step 2 :
+// Déclaration des constantes
 const descBackground = document.getElementsByClassName('description')[0];
 const descParagraph = document.querySelector('.description:nth-child(1) > p');
 const userName = document.getElementById("firstname");
@@ -18,20 +18,29 @@ const pinkBg = document.querySelectorAll('.pink-bg');
 
 const allA = document.querySelectorAll('a');
 
-const descArticle = document.createElement('article');
-descArticle.style.padding = "1rem";
-descArticle.style.display = "flex";
-descArticle.style.justifyContent = "center";
-descArticle.style.alignContent = "center";
-descParagraph.appendChild(descArticle);
+function createAnElement(tag, parent) {
+    const element = document.createElement(tag);
+    element.style.padding = "1rem";
+    element.style.display = "flex";
+    element.style.justifyContent = "center";
+    element.style.alignContent = "center";
+    parent.appendChild(element);
+    return element;
+}
 
-const btnModification = document.createElement('p');
-btnModification.style.padding = "1rem";
-btnModification.style.border = "1px solid white";
+function createAButton(tag, parent) {
+    const element = document.createElement(tag);
+    element.style.padding = "1rem";
+    element.style.backgroundColor = "#750ff7";
+    element.style.color = "white";
+    parent.appendChild(element);
+    return element
+}
 
+const descArticle = createAnElement('article', descParagraph);
+const btnModification = createAButton('button', descArticle);
 btnModification.innerText = "Modify Text and Color";
 
-descArticle.appendChild(btnModification);
 
 // Step 3 :
 btnModification.addEventListener('click', () => {
@@ -46,6 +55,7 @@ btnModification.addEventListener('click', () => {
         e.style.color = newColor;
     })
     frontDevToolsButton.style.backgroundColor = newColor;
+    newBtn.style.backgroundColor = newColor;
 
 
     userName.innerText = prompt('Enter your name');
@@ -72,15 +82,50 @@ frontDevToolsButton.innerText = "Modify";
 
 frontDevToolsArticle.appendChild(frontDevToolsButton);
 
-
-frontDevToolsButton.addEventListener('click', () => {
-    allLi.forEach((e, index) => {
-        if (index === 0) {
-            e.innerText = "VSCode" 
-        } else if (index === 1) {
-            e.innerText = "GitHub"
-        } else if (index === 2) {
-            e.innerText = "Terminal"
-        }
+function changeLi() {
+    frontDevToolsButton.addEventListener('click', () => {
+        allLi.forEach((e, index) => {
+            if (index === 0) {
+                e.innerText = "VSCode" 
+            } else if (index === 1) {
+                e.innerText = "GitHub"
+            } else {
+                e.innerText = "Terminal"
+            }
+        })
     })
-})
+}
+
+changeLi();
+
+// step 7
+const liColumn = document.getElementsByClassName('column')[0];
+const selectUlColum = document.querySelector('.column > ul');
+
+const newArticle = document.createElement('article');
+newArticle.classList.add('flexArticle');
+newArticle.style.display = "flex";
+newArticle.style.justifyContent = "center";
+newArticle.style.gap = "0.5rem";
+liColumn.appendChild(newArticle);
+
+const newInput = document.createElement('input');
+// newInput.addEventListener('change', () => {
+//     const newLi = document.createElement('li');
+//     newLi.innerText = newInput
+// })
+newArticle.appendChild(newInput);
+
+const newBtn = document.createElement('button');
+newBtn.innerText = "Add";
+newBtn.style.background = "#750ff7";
+newBtn.style.padding = "0.5rem";
+newBtn.style.color = "white";
+newArticle.appendChild(newBtn);
+
+
+// newInput.addEventListener('change', () => {
+//     if (newInput !== null && newBtn) {
+
+//     } 
+// })
