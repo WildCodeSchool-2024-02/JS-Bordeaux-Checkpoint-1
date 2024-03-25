@@ -9,6 +9,7 @@ const eventImg = myImg.addEventListener('click', () => {
 })
 
 // Step 2 :
+const descBackground = document.getElementsByClassName('description')[0];
 const descParagraph = document.querySelector('.description:nth-child(1) > p');
 const userName = document.getElementById("firstname");
 
@@ -28,6 +29,8 @@ btnModification.innerText = "Modify Text and Color";
 descArticle.appendChild(btnModification);
 
 btnModification.addEventListener('click', () => {
+    descBackground.style.backgroundColor = prompt('Enter a color');
+
     userName.innerText = prompt('Enter your name');
     userName.style.color = "white"
 })
