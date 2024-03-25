@@ -149,4 +149,8 @@ article>section {
       align-items: center;
       flex-wrap: wrap;
     }
+
+    .disabled {
+      opacity: 40%;
+    }
 }
