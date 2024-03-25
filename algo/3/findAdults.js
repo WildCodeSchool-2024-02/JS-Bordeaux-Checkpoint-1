@@ -25,18 +25,17 @@ const persons = [
 
 */
 
-// function findAdults(persons) {
-//   const 
-//   for (let i = 0; i < persons.length; i++) {
-//     if (persons[i].age >= 18 && persons[i].sex === 'female') {
-//       const femaleAdults = persons.map((persons) => persons[i]);
-//       console.log(femaleAdults);
-//     } else if (persons[i].age >= 18 && persons[i].sex === 'male') {
-//       const maleAdults = persons.map((persons) => persons[i]);
-//     }
-//     // const adults = "";
-//     // return adults = (femaleAdults.concat(maleAdults));
-//   }
-// }
+function findAdults(persons) {
+  for (let i = 0; i < persons.length; i++) {
+    const newTable = "";
+    if (persons[i].age >= 18 && persons[i].sex === 'female') {
+      const femaleAdults = persons.map((persons) => persons[i]);
+      newTable.push("femaleAdults");
+    } else if (persons[i].age >= 18 && persons[i].sex === 'male') {
+      const maleAdults = persons.map((persons) => persons[i]);
+      newTable.push("maleAdults");
+    }
+  }
+}
 
 module.exports = findAdults;
