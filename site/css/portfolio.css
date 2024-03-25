@@ -108,7 +108,7 @@ nav{
   border-radius: var(--radius);
   text-align: var(--textAlign);
   box-shadow: var(--styledShadow);
-  width: 400px; 
+  
 }
 
 .column:first-of-type {
@@ -151,11 +151,9 @@ nav{
   .desktop {
     display: none;
   }
-}
 
-
-  @media screen and (min-width: 700px) {
   .skills {
+
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
