@@ -9,6 +9,7 @@ const description = document.getElementById('description');
 const thirdTitle = document.querySelectorAll('h4');
 const footer = document.querySelector('footer');
 
+// je n'ai pas le bouton comme dans la vidéo donc l'event listener est sur le titre lui-même
 namePortfolio.addEventListener('click', function () {
     const newColor = prompt('Enter a color');
     const newName = prompt('Enter your name');

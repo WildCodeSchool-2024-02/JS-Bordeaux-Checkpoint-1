@@ -116,6 +116,10 @@ p {
   color: var(--purple);
 }
 
+.disabled {
+  opacity: 0.33;
+}
+
 @media screen and (width > 700px) {
 
   nav {
@@ -136,5 +140,9 @@ p {
   .skills {
     display: flex;
     flex-direction: row-reverse;
+  }
+
+  .box {
+    display: inline-block;
   }
 }
