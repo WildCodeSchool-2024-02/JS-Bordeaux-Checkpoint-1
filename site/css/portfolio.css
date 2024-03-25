@@ -129,6 +129,12 @@ p {
     flex-direction: row-reverse;
     justify-content: center;
   }
+  .projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (width < 700px){
