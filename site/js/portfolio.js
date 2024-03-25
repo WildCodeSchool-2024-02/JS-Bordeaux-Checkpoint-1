@@ -28,6 +28,9 @@ button.addEventListener('click', function() {
     changeColorText.forEach(element => {
         element.style.color = '#750ff7';
     });
-
-
 })
+
+const changeColorLink = document.querySelectorAll('a');
+    changeColorLink.forEach(element => {
+        element.style.color = '#750ff7';
+    });
