@@ -18,6 +18,7 @@ const whiteColor = "#ffffff";
 const bioBg = document.getElementById('bio');
 const pinkBgClass = document.querySelectorAll('.pink-bg');
 const pinkTextClass = document.querySelectorAll('.pink-text');
+const aElements = document.getElementsByTagName('a');
 
 const changeNameAndColor = () => {
     modifyName.addEventListener('click', () => {
@@ -31,8 +32,27 @@ const changeNameAndColor = () => {
         for (let pinkTextElement of pinkTextClass) {
             pinkTextElement.style.color = newBgColor;
         }
+        for (let a of aElements) {
+            a.style.color = newBgColor;
+        }
         firstName.style.color = whiteColor;
     });
 }
 
 changeNameAndColor();
+
+const modifyToolButton = document.getElementById('changeDevTools');
+const devToolItem = document.getElementsByClassName('front-dev-tool');
+const myTools = ["GitHub", "VSCode", "Terminal"];
+
+const modifyTool = () => {
+    modifyToolButton.addEventListener('click', () => {
+        let i = 0;
+        for (let toolItem of devToolItem) {
+            toolItem.innerText = myTools[i];
+            i++;
+        }
+    });
+}
+
+modifyTool();

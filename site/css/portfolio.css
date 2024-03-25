@@ -52,12 +52,13 @@ p {
   background-color: var(--lightWildColor);
 }
 
-.description>button {
+button {
   height: 40px;
   border-radius: var(--radius);
   margin: 1rem;
   background-color: transparent;
   color: var(--cardColor);
+  padding: 0 1rem;
 }
 
 .skills {
@@ -174,6 +175,7 @@ p {
   .box {
     width: 100%;
   }
+
   .box:last-of-type {
     grid-column: 2/3;
   }
