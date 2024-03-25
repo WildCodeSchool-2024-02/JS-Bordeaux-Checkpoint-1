@@ -12,14 +12,23 @@ avatar.addEventListener("click", function() {
 
 
 let myName = document.getElementById("firstname");
+let changeColor = document.querySelector(".pink-bg");
 
 
 let modifyButton = document.createElement('button');
 modifyButton.textContent = "modify Text and Color";
 
 modifyButton.addEventListener("click", function(){
-    let newName = prompt('Enter your name :');
-    
+    let newBgColor = prompt('Enter a color');
+
+    if(newBgColor !== null){
+
+        let descriptionSection = document.querySelector('.description.pink-bg');
+        descriptionSection.style.backgroundColor = newBgColor;
+    }
+
+
+    let newName = prompt('Enter your name :');   
     if(newName !== null){
         myName.textContent = newName;
         myName.style.color = "white";
