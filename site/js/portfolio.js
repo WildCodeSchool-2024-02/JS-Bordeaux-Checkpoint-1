@@ -16,6 +16,8 @@ const userName = document.getElementById("firstname");
 const pinkText = document.querySelectorAll('.pink-text');
 const pinkBg = document.querySelectorAll('.pink-bg');
 
+const allA = document.querySelectorAll('a');
+
 const descArticle = document.createElement('article');
 descArticle.style.padding = "1rem";
 descArticle.style.display = "flex";
@@ -33,7 +35,6 @@ descArticle.appendChild(btnModification);
 
 // Step 3 :
 btnModification.addEventListener('click', () => {
-    // descBackground.style.backgroundColor = prompt('Enter a color');
     const newColor = prompt('Enter a color : ');
     pinkText.forEach((e) => {
         e.style.color = newColor;
@@ -41,9 +42,12 @@ btnModification.addEventListener('click', () => {
     pinkBg.forEach((e) => {
         e.style.backgroundColor = newColor;
     })
+    allA.forEach((e) => {
+        e.style.color = newColor;
+    })
 
     userName.innerText = prompt('Enter your name');
     userName.style.color = "white"
 })
 
-// Step 4 :
+// Step 5 :
