@@ -62,7 +62,7 @@ p {
   text-align: var(--textAlign);
 }
 
-.column {
+article>section {
   border-left: var(--styledBorder);
   border-right: var(--styledBorder);
   border-bottom: var(--styledBorder);
@@ -107,4 +107,41 @@ p {
 
 .purple-text {
   color: var(--purple);
+}
+
+@media screen and (width <= 700px) {
+  .desktop>img {
+    display: none;
+  }
+  article {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (width >= 700px) {
+    header>nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    main>section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+
+    .skills--title {
+      grid-column: 1/3;
+    }
+    .columnFrontend {
+      order: 1;
+    }
 }
