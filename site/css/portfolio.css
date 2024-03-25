@@ -127,4 +127,12 @@ nav {
   display: flex;
 }
 
+.skills {
+  display: flex; 
+  justify-content: center;
+}
+.column {
+  width: 400px;
+}
+
 }
