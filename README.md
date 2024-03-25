@@ -1,4 +1,4 @@
-# Checkpoint 1 - JS
+# Checkpoint 1 - JS enzo
 
 ## Introduction - Que sont les checkpoints ?
 
