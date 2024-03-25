@@ -56,3 +56,19 @@ const modifyTool = () => {
 }
 
 modifyTool();
+
+const inputBackTool = document.getElementById('inputBackTool');
+const addBackToolForm = document.getElementById('addBackToolForm');
+const backToolList = document.getElementById('backendList');
+
+const addBackTool = () => {
+    addBackToolForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const newLi = document.createElement('li');
+        newLi.innerText = inputBackTool.value;
+        backToolList.appendChild(newLi);
+        inputBackTool.value = "";
+    })
+}
+
+addBackTool();

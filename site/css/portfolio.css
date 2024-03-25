@@ -61,6 +61,12 @@ button {
   padding: 0 1rem;
 }
 
+input {
+  height: 40px;
+  border-radius: var(--radius);
+  padding: 0.25rem;
+}
+
 .skills {
   display: grid;
   grid-template-columns: 1fr;
