@@ -132,8 +132,6 @@ nav {
 .skills {
   display: flex;
   justify-content: center;
-  flex-direction: row;
-
 }
 .column {
   width: 400px;
