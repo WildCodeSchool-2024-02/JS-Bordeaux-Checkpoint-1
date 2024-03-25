@@ -9,3 +9,25 @@ avatar.addEventListener("click", function() {
         avatar.alt = "avatar1";
     }
 });
+
+
+let myName = document.getElementById("firstname");
+
+
+let modifyButton = document.createElement('button');
+modifyButton.textContent = "modify Text and Color";
+
+modifyButton.addEventListener("click", function(){
+    let newName = prompt('Enter your name :');
+    
+    if(newName !== null){
+        myName.textContent = newName;
+        myName.style.color = "white";
+    }
+});
+
+let descriptionSection = document.querySelector('.description.pink-bg');
+
+descriptionSection.appendChild(modifyButton);
+
+
