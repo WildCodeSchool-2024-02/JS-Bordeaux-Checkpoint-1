@@ -126,6 +126,17 @@ main>section {
   opacity: 0.2;
 }
 
+#buttonText {
+  display: block;
+  margin: var(--gutter) auto;
+  color: var(--light);
+  padding: var(--gutter);
+  background-color: pink;
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 700px) {
   .desktop {
     display: block;
@@ -147,9 +158,9 @@ main>section {
     align-items: center;
   }
 
-  .container{
-    display :flex;
+  .container {
+    display: flex;
     flex-wrap: wrap;
-   justify-content: center;
+    justify-content: center;
   }
 }
