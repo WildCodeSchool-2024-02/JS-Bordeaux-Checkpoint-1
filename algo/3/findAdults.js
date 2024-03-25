@@ -1,9 +1,15 @@
 /*
-Voici un exemple de tableau de personnes. Écris une fonction qui à partir d'un tableau similaire reçu en paramètre renverra un nouveau tableau,
+Voici un exemple de tableau de personnes. Écris une fonction qui à partir d'un 
+tableau similaire reçu en paramètre renverra un nouveau tableau,
 lui-même contenant deux sous-tableaux :
 - Le premier contient uniquement des femmes adultes
 - Le second ne contient que des hommes adultes
 (Étant donné qu'une personne est un adulte si elle a 18 ans ou plus)
+
+boucle sur age
+boucle sur sexe
+crée1 nouveau tableau par sexe adultes*/
+
 
 const persons = [
   { name: 'Mary Poppins', age: 32, sex: 'female' },
@@ -26,7 +32,15 @@ const persons = [
 */
 
 function findAdults(persons) {
-  // Your code here !
+for let(i=0; i<persons.length, i++) {  
+  if (sex==='female' && age>=18) {
+      let female.push[];
+  } else if {
+        let male.push[];
+  } else {
+    console.log("there are no adults in this array");
+  }
 }
-
+}
 module.exports = findAdults;
+

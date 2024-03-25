@@ -10,18 +10,29 @@
 
   --textAlign: center;
 }
-
+/* 
 img {
   max-width: 100%;
+} */
+
+.logoHeader {
+  width: 20%;
+  display: inline;
+  -ms-flex-align: start;
 }
 
 h1 {
   font-size: calc(var(--gutter) * 1.5);
 }
 
+.monAvatar {
+  width: 40%;
+}
+
 p {
   padding: 0 var(--gutter);
 }
+
 
 .menu {
   display: flex;
@@ -32,6 +43,12 @@ p {
   margin: 0;
   margin-top: calc(var(--gutter) * 5);
   margin-bottom: calc(var(--gutter) * -0.3125);
+  display: none;
+}
+
+.firstBanner {
+  width: 100%;
+  background-color: var(--shadowColor);
 }
 
 .description {
@@ -107,4 +124,87 @@ p {
 
 .purple-text {
   color: var(--purple);
+}
+
+@media screen and (min-width: 700px)  {
+  
+header {
+display: flex;
+justify-content: center;
+    
+}
+
+header>h1 {
+  color: red;
+}
+.monAvatar {
+width: 100%;
+}
+
+.desktop {
+  margin: 0;
+  margin-top: calc(var(--gutter) * 5);
+  margin-bottom: calc(var(--gutter) * -0.3125);
+}
+
+
+
+.firstBanner {
+  width: 100%;
+  background-color: var(--shadowColor);
+}
+
+.description {
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.description p {
+  width: 60%;
+  text-align: var(--textAlign);
+}
+
+.pink-bg {
+  background-color: var(--lightWildColor);
+}
+
+.skills {
+  margin-top: 2rem;
+  border-radius: var(--radius);
+  /* padding: 0 10%; */
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.skills--title {
+  width: auto;
+  /* margin: calc(var(--gutter) * -2) 0; */
+  display: flex;
+  text-align: end;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.box {
+  width: 25%;
+  padding: calc(var(--gutter) * 2);
+  border: var(--styledBorder);
+  margin: calc(var(--gutter) * 1.25);
+  border-radius: var(--radius);
+  box-shadow: var(--styledShadow);
+  display: flex;
+  /* A TERMINER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+  .monAvatar {
+    width: 40%;
+  }
+}
+
+
 }

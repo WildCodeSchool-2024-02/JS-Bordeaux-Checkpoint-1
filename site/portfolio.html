@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/home.css">
     <title>Checkpoint 1 Portfolio</title>
   </head>
 
   <body>
-    <header>
-      <nav>
-        <img src="image/logo.svg" alt="logo-purple" />
+    <header> 
+      <nav><img src="image/logo.svg" alt="logo-purple" class="logoHeader"/>
         <ul class="menu">
           <li><a href="home.html">Instructions</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
@@ -20,7 +20,13 @@
     </header>
 
     <main>
-      <!-- First banner with title, description, avatar and image desktop -->
+
+        <div class="firstBanner">  
+          <h1>Titre de bannière</h1>
+          <p>Une petite description</p>
+          <img src="image/avatar.svg" alt="Mon avatar" class="monAvatar">
+        </div>
+      <!-- title + descr p + avatar The banner must be centered in the page for screens greater than 700px -->
       <!-- You can use the avatar image on the folder image -->
       <section>
         <figure class="desktop">
@@ -37,7 +43,7 @@
       </article>
 
       <!-- Bloc of list of skill front end and back end -->
-        
+      <!-- The front skill block must be above the back skill block for screens less than 700px -->
       <article class="skills">
         <h2 class="skills--title">My Skills</h2>
           <section class="column">
