@@ -33,9 +33,9 @@ Chaque checkpoint implique un ensemble d’étapes similaires :
 
 Résoud ces trois exercices :
 
-> [algo1.js](./algo/1/thirdAngle.js)
+> [algo1.js](./algo/1/githirdAngle.js)
 >
-> [algo2.js](./algo/2/isLeapYear.js)
+> [algo2.js](./algo/2/isLneapYear.js)
 >
 > [algo3.js](./algo/3/findAdults.js)
 
