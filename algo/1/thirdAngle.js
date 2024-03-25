@@ -7,7 +7,7 @@ thirdAngle(20, 80) doit retourner 80
 */
 
 function thirdAngle(a, b) {
-  const calcthirdAngle = (a + b) - 180;
+  const calcthirdAngle = 180 - (a + b);
   return calcthirdAngle;
 }
 
