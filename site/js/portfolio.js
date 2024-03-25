@@ -19,5 +19,5 @@ const bgColor = document.getElementsByClassName('pink-bg');
 buttonText.addEventListener('click', () => {
     firstName.innerHTML = prompt('enter your text');
     firstName.style.color = '#FFFFFF';
-    bgColor.style.backgroundColor = prompt('Color?');
+    bgColor[0].style.backgroundColor = prompt('Color?');
 })

@@ -131,7 +131,7 @@ main>section {
   margin: var(--gutter) auto;
   color: var(--light);
   padding: var(--gutter);
-  background-color: pink;
+  background-color: transparent;
   border-radius: 0.5rem;
   border: 1px solid white;
   cursor: pointer;
