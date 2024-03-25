@@ -13,6 +13,9 @@ const descBackground = document.getElementsByClassName('description')[0];
 const descParagraph = document.querySelector('.description:nth-child(1) > p');
 const userName = document.getElementById("firstname");
 
+const pinkText = document.querySelectorAll('.pink-text');
+const pinkBg = document.querySelectorAll('.pink-bg');
+
 const descArticle = document.createElement('article');
 descArticle.style.padding = "1rem";
 descArticle.style.display = "flex";
@@ -28,9 +31,19 @@ btnModification.innerText = "Modify Text and Color";
 
 descArticle.appendChild(btnModification);
 
+// Step 3 :
 btnModification.addEventListener('click', () => {
-    descBackground.style.backgroundColor = prompt('Enter a color');
+    // descBackground.style.backgroundColor = prompt('Enter a color');
+    const newColor = prompt('Enter a color : ');
+    pinkText.forEach((e) => {
+        e.style.color = newColor;
+    })
+    pinkBg.forEach((e) => {
+        e.style.backgroundColor = newColor;
+    })
 
     userName.innerText = prompt('Enter your name');
     userName.style.color = "white"
 })
+
+// Step 4 :
