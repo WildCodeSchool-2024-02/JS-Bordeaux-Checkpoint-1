@@ -4,7 +4,8 @@ imgAvatar.addEventListener('click', function (){
     imgAvatar.alt = "Avatar bis";
 });
 
-const sectionPinkBG = document.querySelector('.pink-bg')
+let r = document.querySelector(':root');
+// const sectionPinkBG = document.querySelector('.pink-bg')
 const button = document.querySelector('.button')
 const firstName = document.querySelector('#firstname');
 button.addEventListener('click', function (){
@@ -12,6 +13,7 @@ button.addEventListener('click', function (){
     firstName.innerHTML = firstName.innerHTML.replace('Matt', `${changedName}`);
     changedName = firstName.style.color = 'white'; 
     let changedBackground = prompt("What color do you want?");
-    sectionPinkBG = sectionPinkBG.style.background = changedBackground;
+    // sectionPinkBG = sectionPinkBG.style.background = changedBackground;
+    r.style.setProperty('--lightWildColor', `${changedBackground}`);
 
 });
