@@ -41,26 +41,29 @@ const descArticle = createAnElement('article', descParagraph);
 const btnModification = createAButton('button', descArticle);
 btnModification.innerText = "Modify Text and Color";
 
+function colorState(){
+    btnModification.addEventListener('click', () => {
+        const newColor = prompt('Enter a color : ');
+        pinkText.forEach((e) => {
+            e.style.color = newColor;
+        })
+        pinkBg.forEach((e) => {
+            e.style.backgroundColor = newColor;
+        })
+        allA.forEach((e) => {
+            e.style.color = newColor;
+        })
+        frontDevToolsButton.style.backgroundColor = newColor;
+        newBtn.style.backgroundColor = newColor;
+        btnModification.style.backgroundColor = newColor;
+    
+    
+        userName.innerText = prompt('Enter your name');
+        userName.style.color = "white"
+    });
+}
 
-// Step 3 :
-btnModification.addEventListener('click', () => {
-    const newColor = prompt('Enter a color : ');
-    pinkText.forEach((e) => {
-        e.style.color = newColor;
-    })
-    pinkBg.forEach((e) => {
-        e.style.backgroundColor = newColor;
-    })
-    allA.forEach((e) => {
-        e.style.color = newColor;
-    })
-    frontDevToolsButton.style.backgroundColor = newColor;
-    newBtn.style.backgroundColor = newColor;
-
-
-    userName.innerText = prompt('Enter your name');
-    userName.style.color = "white"
-});
+colorState();
 
 // Step 6
 const frontDevTools = document.getElementById('front-dev-tools');
